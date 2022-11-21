@@ -14,7 +14,7 @@ spotifyObject = spotipy.Spotify(auth_manager = token)
 playlist_name = "Weather"
 playlist_description = "day"
 
-spotifyObject.user_playlist_create(user = username,name = playlist_name, public = True ,description = playlist_description)
+#spotifyObject.user_playlist_create(user = username,name = playlist_name, public = True ,description = playlist_description)
 
 lim = 20
 #change rec genre list
@@ -25,7 +25,7 @@ g = spotifyObject.recommendation_genre_seeds()
 print(json.dumps(g,sort_keys=4,indent=4))
 #the one that works index on the 0 and get uri to add to playlist
 for x in range(lim):
-	print(recc["tracks"][x]["name"])
+	print(recc["tracks"][x]["name"]) #change name for uri
 
 
 
